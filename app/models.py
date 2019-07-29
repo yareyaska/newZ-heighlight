@@ -1,11 +1,22 @@
-class Movie:
+class Source:
     '''
-    Movie class to define Movie Objects
+    Source class to define News Objects
     '''
+    
+    def __init__(self, id, name, description, url, category):
+        self.id = id
+        self.name = name
+        self.description = description
+        self.url = url
+        self.category = category
 
-    def __init__(self,id,title,overview,poster,):
-        self.id =id
+class Articles:
+    '''
+    Articles class to define Articles Objects
+    '''
+    def __init__(self, title, image, description, url, date):
         self.title = title
-        self.overview = overview
-        self.poster = "https://www.newsbtc.com/wp-content/uploads/2018/08/techanalysis-btc9-700x400.jpg" + poster
-        
+        self.image = image
+        self.description = description
+        self.url = url
+        self.date = date
