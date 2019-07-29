@@ -10,9 +10,9 @@ yussuf hussein
 flask framework
 
 ## Setup/Installation Requirements
-Search for yareyaska/github-searcher repository.
-Clone project
-after cloning open it with the terminal using the ../start
+*Search for yareyaska/github-searcher repository.
+*Clone project
+*after cloning open it with the terminal using the ../start
 
 
 ### BDD
