@@ -10,19 +10,32 @@ yussuf hussein
 flask framework
 
 ## Setup/Installation Requirements
+* install flask on your machine.
 * Search for yareyaska/github-searcher repository.
 * Clone project
-* after cloning open it with the terminal using the ../start
+* after cloning open it with the terminal using the ./start.
+* once ur in the directory activate virtual
+
 
 
 ### BDD
-| Behaviour    ||  input  ||  output  |
+ **Behaviour**
+ * Takes you to source site
 
-| Takes you to source site  | Click a source | Redirects you to a site |
-| Read article on site  | Click on Read more   | Takes you to article on site |
+ **input**  
+ * Click a source
 
+ **output**
+ * Redirects you to a site
 
+ **Behaviour**
+ * Read article on site
 
+ **input**  
+ * Click on Read more
+
+ **output**
+ * Takes you to article on site 
 
 ## Known Bugs
    No Bugs
