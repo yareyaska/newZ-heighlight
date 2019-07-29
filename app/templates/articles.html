@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% import 'macros.html' as macro %}
+
+<!-- Styles Block -->
+
+
+<!-- BLOCK CONTENT -->
+{% block content %}
+<div class="container-fluid">
+
+    <div class="articles">
+        <h3 style="text-align: center; text-decoration: blink;"><img src="../static/images/logo.jpg" alt="" width="150px" height="90px">  {{id}} <span >Trending  News</span></h3>
+        <hr />
+        <ul class="unstyled">
+            <div>
+                {{ macro.displayArticlesList(articles) }}
+            </div>
+        </ul>
+    </div>
+</div>
+{% endblock %}
