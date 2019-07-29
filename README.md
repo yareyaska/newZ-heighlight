@@ -18,8 +18,8 @@ after cloning open it with the terminal using the ../start
 ### BDD
 | Behaviour    || input||output|
 
-|Takes you to source site  | Click a source | |Redirects you to a site|
-| Read article on site  | Click on Read more   | | Takes you to article on site |
+|Takes you to source site  | Click a source | Redirects you to a site|
+| Read article on site  | Click on Read more   | Takes you to article on site |
 
 
 
