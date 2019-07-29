@@ -1,22 +1,52 @@
+{% extends 'base.html'%}
 {% import 'macros.html' as macro%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+        {%block content%}
+    <div class="col-md-4">
+  <!-- Popular movie section  -->
+  <h3><u><strong>GENERAL NEWS</strong></u></h3>
+    {{macro.displaySourceList(general)}}
+       
+    </div>
+    <div class="col-md-4">
+    <!-- Business News -->
+    <h3><u><strong>BUSINESS</strong></u></h3>
+    <div class="is-flex" style="display: flex; flex-wrap: wrap;">
+        {{macro.displaySourceList(business)}}
+    </div>
+    </div>
+    <div class="col-md-4">
+    <!-- Technology News -->
+    <h3><u><strong>TECHNOLOGY</strong></u></h3>
+    <hr>
+    <div class="is-flex" style="display: flex; flex-wrap: wrap;">
+        {{macro.displaySourceList(technology)}}
+    </div>
+        </div>
+    </div>
+    <div class="row">
+     <div class="col-md-6">
+    <!-- Sports News -->
+    <h3><u><strong>SPORT</strong></u></h3>
+    <hr>
+    <div class="is-flex" style="display: flex; flex-wrap: wrap;">
+        {{macro.displaySourceList(sports)}}
+    </div>
+       </div> 
 
 
 
-
-   <body>
-        <!-- Popular movie -->
-        <h3> Popular Movies</h3>
-        <ul>
-            {{ macro.displayMovieList(popular)}}
-        </ul>
-        <!-- Upcoming movie  -->
-        <h3> Upcoming Movies </h3>
-        <ul>
-            {{ macro.displayMovieList(upcoming)}}
-        </ul>
-        <!-- Now showing movie -->
-        <h3>Now Showing</h3>
-        <ul>
-            {{ macro.displayMovieList(now_showing)}}
-        </ul>
-    </body>
+ {% endblock %} 
+ </div>
+</div>
+ 
+</body>
+</html>
