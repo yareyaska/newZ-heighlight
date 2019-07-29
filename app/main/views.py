@@ -1,22 +1,39 @@
-from flask import render_template,request,redirect,url_for
+
+from flask import render_template ,request ,redirect,url_for
 from . import main
-from ..requests import get_movies,get_movie,search_movie
-from .forms import ReviewForm
-from ..models import Review
+from ..requests import get_sources, get_articles, search_articles
+from ..models import Source , Articles
+#Views
 
-
-from .request import get_movies
 
 @main.route('/')
 def index():
-
     '''
-    View root page function that returns the index page and its data
-    '''
+    View root page.
+    ''' 
 
-    # Getting popular movie
-    popular_movies = get_movies('popular')
-    upcoming_movie = get_movies('upcoming')
-    now_showing_movie = get_movies('now_playing')
-    title = 'Home - Welcome to The best Movie Review Website Online'
-    return render_template('index.html', title = title, popular = popular_movies, upcoming = upcoming_movie, now_showing = now_showing_movie )
+    title = 'Home'
+
+    business_sources = get_sources('business')
+
+    entertainment_sources = get_sources('entertainment')
+
+    general_sources = get_sources('general')
+
+    sports_sources = get_sources('sports')
+
+    technology_sources = get_sources('technology')
+
+    return render_template('index.html', title=title, business=business_sources, entertainment=entertainment_sources, sports=sports_sources, general=general_sources, technology=technology_sources)
+
+
+@main.route('/source/<id>')
+def source(id):
+    '''
+    View source page.
+    '''
+    all_articles = get_articles(id)
+    title = f'NewsApp -- {id}'
+    id_id = id
+
+    return render_template('articles.html', articles=all_articles, title=title, id_id=id_id)
